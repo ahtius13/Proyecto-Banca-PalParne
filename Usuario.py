@@ -1,43 +1,54 @@
-import time   # para simular tiempo real
-import math   # para redondear
+# USUARIOS Y SISTEMA DE CUENTAS Y DIVIDENDOS
 
-print("=== SISTEMA DE CUENTAS Y DIVIDENDOS (NIVEL BÁSICO) ===")
+import time   # para simular tiempo
+import math   # para los numeros entteros y decimales.
 
-# 1. Diccionario con tipos de cuenta (NO afectan al dividendo según tus nuevas reglas)
+# 1. Diccionario con tipos de cuenta _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
 tipos_de_cuenta = {
-    "joven": 0.02,       # ya no se usa para intereses
-    "jubilado": 0.002,   # ya no se usa
-    "empresa": 0.02,     # ya no se usa
-    "ong": 0.002         # ya no se usa
+    
+    "joven": 0.02,       
+    "jubilado": 0.002,   
+    "empresa": 0.02,     
+    "ong": 0.002         
 }
 
-# 2. Pedimos datos al usuario
+# 2. Pedimos datos al usuario _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
 nombre = input("Escribe tu nombre: ")
 
 print("Tipos de cuenta disponibles: joven, jubilado, empresa, ong")
 tipo = input("Escribe tu tipo de cuenta: ")
 
-# 3. NUEVA REGLA: saldo base fijo de 100 €
-saldo = 100.0
-print("\nTu saldo inicial es 100€ por regla del sistema.")
+# 3. Saldo base de 100 €_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-# 4. NUEVA REGLA: dividendo fijo del 0.2% (0.002)
+saldo = 100.0
+
+print("Tu saldo es 100€.")
+
+# 4. Dividendo fijo del 0.2%
+
 dividendo = 0.002
 
-print("\nCada 5 segundos se aplicará un dividendo del 0.2%.\n")
+print("Cada 5 segundos se aplicará un dividendo del 0.2%.")
 
-# 5. Bucle que aplica dividendos sin preguntar meses
+# 5. Bucle que aplica dividendos sin preguntar meses _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
 while True:
-    time.sleep(5)   # para pruebas: 5 segundos (en la vida real sería 300 segundos)
+
+    time.sleep(5)   # 5 segundos
 
     # cálculo del dividendo
+
     incremento = saldo * dividendo
     incremento = round(incremento, 2)
 
     # suma al saldo
+
     saldo += incremento
 
     # mostramos cambios
+
     print("=== DIVIDENDO APLICADO ===")
     print("Usuario:", nombre)
     print("Tipo de cuenta:", tipo)
@@ -45,3 +56,4 @@ while True:
     print("Saldo actualizado:", round(saldo, 2), "€")
     print("------------------------------")
 
+# _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
