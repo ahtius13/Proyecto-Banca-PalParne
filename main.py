@@ -4,7 +4,7 @@
 
 # Esta línea importa la función principal del menú desde el archivo MenuPrincipal.py
 # MenuPrincipal.py debe estar en la MISMA carpeta
-from MenuPrincipal import loggin
+from loggin import loggin
 
 
 # Esta condición especial sirve para indicar que este archivo es el que se va a ejecutar
@@ -18,4 +18,5 @@ if __name__ == "__main__":
     loggin()
 
     
+
 
