@@ -39,7 +39,7 @@ Con esta aplicación el usuario puede:
 ----------------------------------------------------------------------------------
 
 python main.py
-
+```
 Proyecto-Banca-PalParne/
 │
 ├── main.py                 # Archivo principal del programa
@@ -57,7 +57,7 @@ Proyecto-Banca-PalParne/
 │
 └── ui/                     # Interfaz de usuario
     └── menu.py             # Menú principal
-
+```
 
 ----------------------------------------------------------------------------------
 
